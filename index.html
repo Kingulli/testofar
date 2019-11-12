@@ -1,0 +1,36 @@
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+ <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script>
+<body style="margin : 0px; overflow: hidden;">
+	<a-scene embedded arjs="sourceType: webcam;">
+    
+   <a-assets>
+     <a-asset-item id="me" src="https://cdn.glitch.com/bfcdbfcb-a2e6-4215-9641-c0296a2b1d28%2Fkayyyyy.gltf?v=1573161408598"></a-asset-item>
+     <a-asset-item id="url1" src="https://cdn.glitch.com/bfcdbfcb-a2e6-4215-9641-c0296a2b1d28%2Fpattern-persian%20rug%20(1).patt?v=1573531561229"></a-asset-item>
+
+    </a-assets>
+
+		
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+       <a-text value="Hello, World!"></a-text>
+      <a-box position="0 0.5 0" material="opacity: 0.5;"></a-box>
+  </a-entity>
+
+
+      <a-obj-model
+                gltf-model="#me" 
+                position="0 0 0">
+              </a-obj-model>
+    
+    <a-sphere mirror scale=".5 .5 .5" position="0 1 0"></a-sphere>
+
+
+
+  
+<!--     <a-box color="yellow" position='0 0.5 0' gps-entity-place="latitude: <38.646712>; longitude: <-90.303510>"/> -->
+		<a-marker-camera type="pattern" url="https://cdn.glitch.com/bfcdbfcb-a2e6-4215-9641-c0296a2b1d28%2Fpattern-68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f77616c63686b6f2f61725f6d61726b6572732f6d61737465722f706963732f6d61726b65722e706e67.patt?v=1573589216639"></a-marker-camera>
+<!-- <a-marker type="pattern" url="https://cdn.glitch.com/bfcdbfcb-a2e6-4215-9641-c0296a2b1d28%2Fpattern-persian%20rug%20(1).patt?v=1573531561229"></a-marker> -->
+    
+    <!--     <a-camera gps-camera rotation-reader></a-camera> -->
+	</a-scene>
+</body>
